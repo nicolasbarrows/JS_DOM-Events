@@ -30,8 +30,13 @@ ex2.insertBefore(link, paragraph);
 /*----------- Exercise #3: REMOVING/REPLACING ELEMENTS/OBJECTS -----------*/
 
 // TODO: Replace the "Child Node" with a new <p> element that reads "New Child Node"
-
+let parent = document.getElementById("exercise-container3");
+let oldChild = document.getElementById("N1")
+let newChild = document.createElement("p");
+newChild.textContent = "New Child Node";
+parent.replaceChild(newChild, oldChild);
 // TODO: Remove the "New Child Node"
+parent.removeChild(newChild);
 
 /*----------- Exercise #4: LIST ITEMS ----------- */
 // Use the following array of values to generate a list on the DOM
@@ -40,13 +45,18 @@ let list = [ "apples", "bananas", "carrots", "dragon fruit", "eggplant", "fish",
 
 
 // TODO: Create an unordered list element
-
+let unorderedList = document.createElement("ul");
 // TODO: Iterate over the array values, and create a list item element for each
-
+list.forEach((element) => {
+    let li = document.createElement("li");
+    li.textContent = element;
 // TODO: Append the new list items to the unordered list element
-
+    console.log(li);
+    unorderedList.appendChild(li);
+});
+console.log(unorderedList);
 // TODO: Append the unordered list to the `div#container` under exercise 4 
-
+document.getElementsByClassName("exercise4")[0].appendChild(unorderedList);
 /*----------- Exercise #5: DOM EVENTS --------------*/
 
 // TODO: write a function called "show" which creates a new div with an alerting message to the user with this message
