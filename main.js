@@ -14,14 +14,18 @@ for (let i = 0; i < h3.length; i++) {
 /*----------- Exercise #2: CREATING/APPENDING/INSERTING ELEMENTS/OBJECTS -----------*/
 
 // TODO: Create a paragraph element using this document.createElement() and put this text inside "This node was created using the createElement() method"
-
+let paragraph = document.createElement("p");
+paragraph.textContent = "This node was created using the createElement() method";
 // TODO: Append the created node to the parent node using the element.appendChild() method
-
+document.getElementsByClassName("exercise2")[0].appendChild(paragraph);
 // TODO: Create a <a> element using this document.createElement() and put this text inside "I am a <a> tag"
-
-// BONUS: Add a link href to the <a>
-
+let link = document.createElement("a");
+link.textContent = "I am a <a> tag";
+// BONUS: Add a link href to the <a>  
+link.href = "https://bit.ly/3dV6cFr";
 // TODO: Insert the created <a> in the parent but before the <p> you just created using the element.insertBefore() method
+let ex2 = document.getElementsByClassName("exercise2")[0];
+ex2.insertBefore(link, paragraph);
 
 /*----------- Exercise #3: REMOVING/REPLACING ELEMENTS/OBJECTS -----------*/
 
