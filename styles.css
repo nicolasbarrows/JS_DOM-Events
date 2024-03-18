@@ -58,11 +58,18 @@ body {
   align-items: center;
 }
 
-#btn {
+button {
   padding: 0.5rem 0.75rem;
   border: none;
   border-radius: 0.5rem;
   color: inherit;
   background-color: darkcyan;
   cursor: pointer;
+}
+
+#xclose {
+  margin: 30px;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
